@@ -1,5 +1,4 @@
 from selene import browser, have
-from selenium.webdriver import Keys
 
 
 def test_practice_form():
@@ -18,8 +17,10 @@ def test_practice_form():
     browser.element('[for=hobbies-checkbox-2]').click()
     browser.element('#uploadPicture').send_keys('C:/test.txt')
     browser.element('#currentAddress').type('User test address')
-    browser.element('#react-select-3-input').type('NCR').press_enter()
-    browser.element('#react-select-4-input').type('Delhi').press_enter()
+    browser.element('#state').click()
+    browser.element('#react-select-3-option-0').click()
+    browser.element('#city').click()
+    browser.element('#react-select-4-option-0').click()
     browser.element('#submit').press_enter()
 
     browser.element('#example-modal-sizes-title-lg').should(have.text(
