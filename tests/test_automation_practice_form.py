@@ -3,6 +3,8 @@ from selene import browser, have
 
 def test_practice_form():
     browser.open('/automation-practice-form')
+    browser.execute_script('document.querySelector("#fixedban").remove()')
+    browser.element('footer').execute_script('element.remove()')
     browser.element('#firstName').type('FirstName')
     browser.element('#lastName').type('LastName')
     browser.element('#userEmail').type('test@test.com')
@@ -15,7 +17,7 @@ def test_practice_form():
     browser.element('#subjectsInput').type('test')
     browser.element('[for=hobbies-checkbox-1]').click()
     browser.element('[for=hobbies-checkbox-2]').click()
-    browser.element('#uploadPicture').send_keys('C:/test.txt')
+    browser.element('#uploadPicture').send_keys('os.path.abspath(resources/test_picture.jpg)')
     browser.element('#currentAddress').type('User test address')
     browser.element('#state').click()
     browser.element('#react-select-3-option-0').click()
