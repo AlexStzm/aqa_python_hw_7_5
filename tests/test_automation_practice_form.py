@@ -1,3 +1,4 @@
+import os
 from selene import browser, have
 
 
@@ -17,7 +18,7 @@ def test_practice_form():
     browser.element('#subjectsInput').type('test')
     browser.element('[for=hobbies-checkbox-1]').click()
     browser.element('[for=hobbies-checkbox-2]').click()
-    browser.element('#uploadPicture').send_keys('os.path.abspath(resources/test_picture.jpg)')
+    browser.element('#uploadPicture').send_keys(os.path.abspath('resources/test_picture.JPG'))
     browser.element('#currentAddress').type('User test address')
     browser.element('#state').click()
     browser.element('#react-select-3-option-0').click()
