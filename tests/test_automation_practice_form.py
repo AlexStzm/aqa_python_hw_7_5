@@ -4,6 +4,8 @@ from selenium.webdriver import Keys
 
 def test_practice_form():
     browser.open('/automation-practice-form')
+    browser.execute_script('document.querySelector("#fixedban").remove()')
+    browser.element('footer').execute_script('element.remove()')
     browser.element('#firstName').type('FirstName')
     browser.element('#lastName').type('LastName')
     browser.element('#userEmail').type('test@test.com')
