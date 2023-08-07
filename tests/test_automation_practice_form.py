@@ -15,7 +15,7 @@ def test_practice_form():
     browser.element('#subjectsInput').type('test')
     browser.element('[for=hobbies-checkbox-1]').click()
     browser.element('[for=hobbies-checkbox-2]').click()
-    browser.element('#uploadPicture').send_keys('C:/test.txt')
+    browser.element('#uploadPicture').send_keys('os.path.abspath(resources/test_picture.jpg)')
     browser.element('#currentAddress').type('User test address')
     browser.element('#react-select-3-input').type('NCR').press_enter()
     browser.element('#react-select-4-input').type('Delhi').press_enter()
