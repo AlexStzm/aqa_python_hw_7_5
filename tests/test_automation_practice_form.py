@@ -14,7 +14,7 @@ def test_practice_form():
     browser.element('[for=gender-radio-1]').click()
     browser.element('#userNumber').type('9999999999')
     browser.element('#dateOfBirthInput').type(Keys.CONTROL + 'A' + Keys.NULL + '15.nov.1991').press_enter()
-    browser.element('#subjectsInput').type('test')
+    browser.element('#subjectsInput').type('Computer Science').press_enter().type('Maths').press_enter()
     browser.element('[for=hobbies-checkbox-1]').click()
     browser.element('[for=hobbies-checkbox-2]').click()
     browser.element('#uploadPicture').send_keys(os.path.abspath('resources/test_picture.JPG'))
@@ -29,5 +29,6 @@ def test_practice_form():
         'FirstName LastName' and
         'test@test.com' and 'Male' and
         '9999999999' and '15 November,1991' and
-        'Sports, Reading' and 'test.txt' and
+        'Computer Science, Maths' and 'Sports, Reading' and
+        'test_picture.JPG' and
         'User test address' and 'NCR Delhi'))
