@@ -29,10 +29,13 @@ def test_practice_form():
 
     browser.element('#example-modal-sizes-title-lg').should(have.text(
         'Thanks for submitting the form'))
-    browser.element('.table-responsive').should(have.text(
-        'FirstName LastName' and
-        'test@test.com' and 'Male' and
-        '9999999999' and '15 November,1991' and
-        'Computer Science, Maths' and 'Sports, Reading' and
-        'test_picture.JPG' and
-        'User test address' and 'NCR Delhi'))
+    browser.element('.table').should(have.text('FirstName LastName')
+        .and_(have.text('test@test.com'))
+        .and_(have.text('Male'))
+        .and_(have.text('9999999999'))
+        .and_(have.text('15 November,1991'))
+        .and_(have.text('Computer Science, Maths'))
+        .and_(have.text('Sports, Reading'))
+        .and_(have.text('test_picture.JPG'))
+        .and_(have.text('User test address'))
+        .and_(have.text('NCR Delhi')))
